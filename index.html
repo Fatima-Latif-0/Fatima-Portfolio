@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatima's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="space-scene" aria-hidden="true"></canvas>
+    <header class="topbar" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Fatima home"><span class="brand-mark"></span><span>Fatima</span></a>
+      <nav><a href="#mission">Profile</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+      <a class="icon-link" href="mailto:fatimaalatif@gmail.com" aria-label="Email Fatima"><span class="mail-icon"></span></a>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-label="Intro">
+        <div class="hero-copy">
+          <p class="eyebrow">Physics • Astronomy • Computer Science</p>
+          <h1>Fatima explores science through code, curiosity, and cosmic thinking.</h1>
+          <p class="lede">A motivated student interested in Physics, Astronomy, and Computer Science, building analytical thinking, creativity, and problem-solving skills through academic achievement, competitions, and hands-on projects.</p>
+          <div class="hero-actions" aria-label="Portfolio actions"><a class="primary-action" href="#projects">Explore Work</a><a class="secondary-action" href="#contact">Contact Fatima</a></div>
+        </div>
+        <aside class="mission-panel" aria-label="Student profile summary">
+          <div class="panel-head"><span>Academic Orbit</span><strong>SSC Ongoing</strong></div>
+          <div class="orbit-readout"><span>Sir Syed School, Campus 4</span><span>Wah Cantt • 2016-2026</span><span>Matriculation: 98%</span></div>
+          <div class="meter" aria-hidden="true"><span></span></div>
+        </aside>
+      </section>
+
+      <section class="stats-band" aria-label="Portfolio highlights">
+        <div><strong>98%</strong><span>SSC academic standing</span></div><div><strong>2025</strong><span>Science Expo project</span></div><div><strong>4</strong><span>competition tracks</span></div><div><strong>STEM</strong><span>physics plus code</span></div>
+      </section>
+
+      <section class="mission" id="mission" aria-label="Profile">
+        <div class="section-title"><p class="eyebrow">Profile</p><h2>A learner with a telescope in one hand and a circuit board in the other.</h2></div>
+        <div class="profile-card"><p>I am eager to learn, collaborate, and take part in opportunities that broaden my knowledge and perspective. My interests in Physics, Astronomy, and Computer Science have helped me build a strong foundation in analytical thinking, creativity, and problem solving.</p></div>
+      </section>
+
+      <section class="section-grid" id="projects" aria-label="Student experience">
+        <div class="section-title"><p class="eyebrow">Student experience</p><h2>Projects and competitions shaped by science, logic, and experimentation.</h2></div>
+        <div class="project-grid">
+          <article class="project-card featured"><span class="project-code">01 / Science Expo 2025</span><h3>Gesture-controlled robotic car</h3><p>Developed a prototype car controlled through hand gestures using sensors, demonstrating electronics, coding, and human-computer interaction.</p></article>
+          <article class="project-card"><span class="project-code">02 / PHYSICS & ASTRONOMY OLYMPIAD</span><h3>International Olympiad participant</h3><p>Competed in an international-level preliminary round, demonstrating conceptual understanding and problem-solving across physics and space science topics.</p></article>
+          <article class="project-card"><span class="project-code">03 / CEATS COMPETITION</span><h3>Analytical science challenge</h3><p>Participated in international-level science assessment work focused on physics, astronomy, reasoning, and conceptual clarity.</p></article>
+          <article class="project-card"><span class="project-code">04 / TALENT HUNT</span><h3>Scientific reasoning assessment</h3><p>Took part in a competitive assessment evaluating scientific knowledge, reasoning, and problem-solving ability.</p></article>
+        </div>
+      </section>
+
+      <section class="systems" id="skills" aria-label="Skills">
+        <div><p class="eyebrow">Skill constellation</p><h2>Web development, programming, science tools, leadership, and design.</h2></div>
+        <div class="capability-list">
+          <div><strong>01</strong><span>HTML, CSS, JavaScript</span></div>
+          <div><strong>02</strong><span>Python learning, SQL learning, Arduino foundations</span></div>
+          <div><strong>03</strong><span>Word, Excel, PowerPoint, Canva, presentations, social graphics</span></div>
+          <div><strong>04</strong><span>Communication, critical thinking, collaboration, leadership</span></div>
+          <div><strong>05</strong><span>English fluency, CRC class representative, councillor</span></div>
+        </div>
+      </section>
+
+      <section class="awards" aria-label="Awards and achievements">
+        <div class="section-title"><p class="eyebrow">Awards</p><h2>Recognition across academics, exhibitions, and olympiad work.</h2></div>
+        <div class="award-grid">
+          <article><strong>High Achiever Award</strong><span>Outstanding academic performance across multiple years.</span></article>
+          <article><strong>1st Position • Science Exhibition 2025</strong><span>Developed and presented a gesture-controlled robotic project.</span></article>
+          <article><strong>Olympiad Medalist</strong><span>Awarded for outstanding performance in an academic olympiad.</span></article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-label="Contact">
+        <p class="eyebrow">Open channel</p>
+        <h2>Ready for the next learning mission.</h2>
+        <div class="contact-links"><a href="mailto:fatimaalatif@gmail.com">fatimaalatif@gmail.com</a><a href="tel:+923215076468">+92 321 5076468</a><a href="https://www.reallygreatsite.com">www.reallygreatsite.com</a></div>
+      </section>
+    </main>
+    <script type="module" src="./scene.js"></script>
+  </body>
+</html>
