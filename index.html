@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fatima | Physics · Astronomy · A-Levels</title>
+<title>Fatima | Portfolio</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&family=Space+Mono&display=swap');
@@ -324,6 +324,112 @@ footer {
   .hero-name { font-size:3rem; }
   .hud { display:none; }
 }
+/* Hide default cursor */
+body{
+    cursor:none;
+}
+
+a,
+button,
+.btn-p,
+.btn-o,
+.ct-link{
+    cursor:none;
+}
+
+/* Cursor */
+
+.cursor{
+    position:fixed;
+    top:0;
+    left:0;
+    width:32px;
+    height:32px;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    z-index:99999;
+}
+
+/* Center */
+
+.cursor-core{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:#ffffff;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    box-shadow:
+        0 0 10px #fff,
+        0 0 20px #a78bfa,
+        0 0 35px #818cf8;
+}
+
+/* Ring */
+
+.cursor-ring{
+    position:absolute;
+    inset:0;
+    border:1px solid rgba(167,139,250,.6);
+    border-radius:50%;
+    animation:spin 5s linear infinite;
+    box-shadow:
+        0 0 12px rgba(167,139,250,.4);
+}
+
+/* Orbiting stars */
+
+.orbit{
+    position:absolute;
+    width:5px;
+    height:5px;
+    background:#93c5fd;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    margin:-2.5px;
+    box-shadow:
+        0 0 10px #93c5fd;
+}
+
+.orbit1{
+    animation:orbit1 2.5s linear infinite;
+}
+
+.orbit2{
+    animation:orbit2 2.5s linear infinite reverse;
+}
+
+/* Hover */
+
+.cursor.hover .cursor-ring{
+    transform:scale(1.7);
+    border-color:#ffffff;
+    box-shadow:
+        0 0 20px #a78bfa,
+        0 0 40px #818cf8;
+}
+
+.cursor.hover .cursor-core{
+    transform:translate(-50%,-50%) scale(1.5);
+}
+
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+@keyframes orbit1{
+    from{transform:rotate(0deg) translateX(16px);}
+    to{transform:rotate(360deg) translateX(16px);}
+}
+
+@keyframes orbit2{
+    from{transform:rotate(180deg) translateX(16px);}
+    to{transform:rotate(540deg) translateX(16px);}
+}
 </style>
 </head>
 <body>
@@ -416,8 +522,7 @@ footer {
 <section id="hero">
   <p class="hero-eye">
     <svg><use href="#i-planet" style="stroke:var(--acc)"/></svg>
-    Exploring another solar system — one equation at a time
-  </p>
+Code. Learn. Create.  </p>
   <h1 class="hero-name"><span>FATIMA</span></h1>
   <p class="hero-tag">
     Student of <strong>Physics & Astronomy</strong>, builder of gesture-controlled robots,
@@ -1048,6 +1153,19 @@ window.addEventListener('scroll', () => {
   secs.forEach(s => { if(window.scrollY>=s.offsetTop-200) cur=s.getAttribute('id'); });
   nls.forEach(a => { a.style.color = a.getAttribute('href')==='#'+cur ? 'var(--acc)' : ''; });
 });
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
 </script>
+<div class="cursor">
+    <div class="cursor-ring"></div>
+    <div class="cursor-core"></div>
+
+    <div class="orbit orbit1"></div>
+    <div class="orbit orbit2"></div>
+</div>
 </body>
 </html>
